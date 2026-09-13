@@ -6,13 +6,13 @@ A machine learning-based web application designed to predict the likelihood of d
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Diabetes is a critical global health issue requiring early detection for effective management and prevention. This repository provides an end-to-end Machine Learning solution that analyzes key patient parameters (such as Glucose level, BMI, and Age) to accurately determine whether an individual is diabetic or non-diabetic.
 
 ---
 
-## ✨ Features
+##  Features
 
 * **Interactive Web Interface:** User-friendly HTML forms to input health diagnostics.
 * **RESTful API Backend:** Dedicated `/predict` endpoint to process predictions via JSON requests.
@@ -21,7 +21,7 @@ Diabetes is a critical global health issue requiring early detection for effecti
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Language:** Python 3.12.1
 * **Machine Learning & Data Processing:** Scikit-Learn, Pandas, NumPy
@@ -30,7 +30,7 @@ Diabetes is a critical global health issue requiring early detection for effecti
 
 ---
 
-## 📊 Dataset & Model Performance
+##  Dataset & Model Performance
 
 ### Dataset Overview
 * **Source:** Pima Indians Diabetes Dataset (Kaggle)
@@ -52,7 +52,7 @@ Diabetes is a critical global health issue requiring early detection for effecti
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 diabetes-prediction-web-app/
