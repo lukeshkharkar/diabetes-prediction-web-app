@@ -1,44 +1,64 @@
 # Diabetes Prediction Web Application
 
-A lightweight web application that predicts the likelihood of diabetes based on diagnostic patient data.
+A machine learning-based web application designed to predict the likelihood of diabetes in individuals using diagnostic health measurements. The project features a complete machine learning pipeline—from data preprocessing and feature scaling to model training, REST API creation using Flask, and web deployment on Render.
+
+**Live Demo:** [Diabetes Prediction Web App](https://diabetes-prediction-web-app-0n9b.onrender.com/)
 
 ---
 
-## Overview
+## 📌 Project Overview
 
-Diabetes is a widespread health condition that requires early detection for effective management. This project uses diagnostic health indicators—such as glucose levels, BMI, and age—to train a machine learning model capable of predicting whether an individual is diabetic or non-diabetic. The final model is integrated into a Flask backend and hosted online for public demonstration.
-
----
-
-## Key Highlights
-
-* **Input Data:** Trained on the Pima Indians Diabetes Dataset (768 records with 8 diagnostic features).
-* **Machine Learning Model:** Support Vector Machine (SVM) classifier achieving ~77% testing accuracy.
-* **Web Integration:** Built using Flask for processing requests and served via an interactive user interface.
-* **Deployment:** Live on Render web services.
+Diabetes is a critical global health issue requiring early detection for effective management and prevention. This repository provides an end-to-end Machine Learning solution that analyzes key patient parameters (such as Glucose level, BMI, and Age) to accurately determine whether an individual is diabetic or non-diabetic.
 
 ---
 
-## Technical Stack
+## ✨ Features
+
+* **Interactive Web Interface:** User-friendly HTML forms to input health diagnostics.
+* **RESTful API Backend:** Dedicated `/predict` endpoint to process predictions via JSON requests.
+* **Data Standardization:** Integrates `StandardScaler` (`scaler.pkl`) to ensure input data is properly scaled before model prediction.
+* **Cloud Deployment:** Fully deployed and active on Render web services.
+
+---
+
+## 🛠️ Tech Stack
 
 * **Language:** Python 3.12.1
-* **Libraries:** Scikit-Learn, Pandas, NumPy
-* **Framework:** Flask
-* **Hosting Platform:** Render
+* **Machine Learning & Data Processing:** Scikit-Learn, Pandas, NumPy
+* **Web Framework:** Flask
+* **Deployment:** Render
 
 ---
 
-## Project Structure
+## 📊 Dataset & Model Performance
+
+### Dataset Overview
+* **Source:** Pima Indians Diabetes Dataset (Kaggle)
+* **Total Samples:** 768 (500 Non-Diabetic, 268 Diabetic)
+* **Input Features (8):** `Pregnancies`, `Glucose`, `BloodPressure`, `SkinThickness`, `Insulin`, `BMI`, `DiabetesPedigreeFunction`, `Age`
+
+### Machine Learning Model
+* **Algorithm:** Support Vector Machine (SVM) with Linear Kernel
+* **Train/Test Split:** 80% Training (614 samples) / 20% Testing (154 samples)
+
+| Metric | Score |
+| :--- | :--- |
+| **Training Accuracy** | 78.26% |
+| **Test Accuracy** | 77.27% |
+| **Precision (Diabetic)** | 75.67% |
+| **Recall (Diabetic)** | 51.85% |
+| **F1-Score** | 61.54% |
+| **ROC-AUC** | 0.7920 |
+
+---
+
+## 📁 Repository Structure
 
 ```text
 diabetes-prediction-web-app/
-├── templates/            # HTML user interface
-├── app.py                # Flask server application
-├── model.pkl             # Trained SVM model
-├── scaler.pkl            # Pre-trained feature scaler
+├── templates/            # HTML files for web UI
+├── app.py                # Flask application code & API endpoints
+├── model.pkl             # Saved Support Vector Machine model
+├── scaler.pkl            # Pre-trained StandardScaler instance
 ├── requirements.txt      # Project dependencies
-└── README.md             # Repository documentation
-```
-
----
-
+└── README.md             # Project documentation
